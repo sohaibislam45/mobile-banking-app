@@ -1,5 +1,8 @@
 const pinNumber=1234;
 const accountNo=12345678910;
+const agentNo=12345678910;
+
+//add money feature
 document.getElementById('add-money-btn').addEventListener('click',function(e){
     e.preventDefault()
     const addBank=document.getElementById('add-bank').value;
@@ -13,13 +16,62 @@ document.getElementById('add-money-btn').addEventListener('click',function(e){
         alert('Invalid Bank Account Number');
         return;
     }
+    //pin check
     if(addPin!=pinNumber){
         alert('Invalid pin number');
         return;
     }
+    //money validity check
+    if(addAmount<=0){
+        alert('Please enter at least 1 taka');
+        return;
+    }
+    //add money feature
     const totalAmount=availableBalance+addAmount;
     document.getElementById('available-balance').innerText=totalAmount;
 })
+
+
+
+//cash out feature
+document.getElementById('withdraw-btn').addEventListener('click',function(e){
+    e.preventDefault();
+    const agentNumber=parseInt(document.getElementById('agent-no').value);
+    const cashoutAmount=parseInt(document.getElementById('cashout-amount').value);
+    const cashoutPin=parseInt(document.getElementById('cashout-pin').value);
+    const availableBalance=parseInt(document.getElementById('available-balance').innerText);
+
+    // account validity check
+    if(agentNumber.length!=11 && agentNumber!=agentNo){
+        alert('Invalid Bank Account Number');
+        return;
+    }
+    //pin check
+    if(cashoutPin!=pinNumber){
+        alert('Invalid pin number');
+        return;
+    }
+    //money validity check
+    if(cashoutAmount<=0){
+        alert('Please enter at least 1 taka');
+        return;
+    }
+    
+    //withdraw feature
+    const totalAmount=availableBalance-cashoutAmount;
+    //withdraw validity check
+    if(totalAmount<=0){
+        alert('insufficient Balance');
+        return;
+    }
+    document.getElementById('available-balance').innerText=totalAmount;
+
+    
+})
+
+
+
+
 
 // toggling feature
 document.getElementById('add-btn').addEventListener('click',function(){
