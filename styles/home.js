@@ -114,9 +114,13 @@ document.getElementById('pay-bill-btn').addEventListener('click',function(){
 
 
 
-
+// Protect home page
+if (!localStorage.getItem('isLoggedIn')) {
+    window.location.replace('/index.html');
+}
 
 // log out button clicked
 document.getElementById('log-out-btn').addEventListener('click',function(){
-    window.location.href='/index.html';
+    localStorage.removeItem('isLoggedIn'); // clear login state
+    window.location.replace('/index.html');
 })
