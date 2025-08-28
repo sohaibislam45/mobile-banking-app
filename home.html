@@ -17,7 +17,7 @@
         <div class="flex gap-2">
             <img src="/assets/Group.png" class="w-[50px]" alt="">
             <div>
-                <h1 class="text-lg font-bold">$<span id="available-balance">4500</span></h1>
+                <h1 class="text-lg font-bold"><i class="fa-solid fa-bangladeshi-taka-sign text-sm"></i><span id="available-balance">0</span></h1>
                 <p class="text-[#08080880]">Available Balance</p>
             </div>
         </div>
@@ -35,27 +35,27 @@
 
     <!-- money option div -->
     <div class="p-5 min-h-[200px] max-w-lg mx-auto bg-white grid grid-cols-3 gap-4 rounded-b-3xl">
-        <div id="add-btn" class="p-4 border-1 border-[#0808081a] text-center rounded-xl">
+        <div id="add-btn" class="active-btn p-4 border-1 border-[#0808081a] text-center rounded-xl">
             <img src="/assets/wallet1.png" class="mx-auto" alt="">
             <h3 class=" text-sm font-medium pt-2 text-[#08080880]">Add Money</h3>
         </div>
-        <div id="cash-out-btn" class="p-4 border-1 border-[#0808081a] text-center rounded-xl">
+        <div id="cash-out-btn" class="active-btn p-4 border-1 border-[#0808081a] text-center rounded-xl">
             <img src="/assets/send1.png" class="mx-auto" alt="">
             <h3 class=" text-sm font-medium pt-2 text-[#08080880]">Cash Out</h3>
         </div>
-        <div id="transfer-money-btn" class="p-4 border-1 border-[#0808081a] text-center rounded-xl">
+        <div id="transfer-money-btn" class="active-btn p-4 border-1 border-[#0808081a] text-center rounded-xl">
             <img src="/assets/money1.png" class="mx-auto" alt="">
             <h3 class=" text-sm font-medium pt-2 text-[#08080880]">Transfer Money</h3>
         </div>
-        <div id="get-bonus-btn" class="p-4 border-1 border-[#0808081a] text-center rounded-xl">
+        <div id="get-bonus-btn" class="active-btn p-4 border-1 border-[#0808081a] text-center rounded-xl">
             <img src="/assets/bonus1.png" class="mx-auto" alt="">
             <h3 class=" text-sm font-medium pt-2 text-[#08080880]">Get Bonus</h3>
         </div>
-        <div id="pay-bill-btn" class="p-4 border-1 border-[#0808081a] text-center rounded-xl">
+        <div id="pay-bill-btn" class="active-btn p-4 border-1 border-[#0808081a] text-center rounded-xl">
             <img src="/assets/purse1.png" class="mx-auto" alt="">
             <h3 class=" text-sm font-medium pt-2 text-[#08080880]">Pay Bill</h3>
         </div>
-        <div class="p-4 border-1 border-[#0808081a] text-center rounded-xl">
+        <div class="active-btn p-4 border-1 border-[#0808081a] text-center rounded-xl">
             <img src="/assets/transaction1.png" class="mx-auto" alt="">
             <h3 class=" text-sm font-medium pt-2 text-[#08080880]">Transactions</h3>
         </div>
@@ -63,7 +63,7 @@
 
     <div class="all-option-section">
         <!-- add money form section -->
-        <div id="add-money-section" class="add-money-input-section" style="display: none;">
+        <div id="add-money-section" class="form-section add-money-input-section" style="display: none;">
             <h1 class="text-lg font-semibold mt-8 ml-7">Add Money</h1>
             <div class=" pb-4 bg-white m-7 rounded-3xl px-6">
                 <div class="p-4">
@@ -98,7 +98,7 @@
             </div>
         </div>
         <!-- cash out form section -->
-        <div id="cash-out-section" class="cash-out-input-section" style="display: none;">
+        <div id="cash-out-section" class="form-section cash-out-input-section" style="display: none;">
             <h1 class="text-lg font-semibold mt-8 ml-7">Cash Out</h1>
             <div class=" pb-4 bg-white m-7 rounded-3xl px-6">
                 <div class="m-4 mt-0">
@@ -121,7 +121,7 @@
             </div>
         </div>
         <!-- transfer money form section -->
-        <div id="transfer-money-section" class="cash-out-input-section" style="display: none;">
+        <div id="transfer-money-section" class="form-section cash-out-input-section" style="display: none;">
             <h1 class="text-lg font-semibold mt-8 ml-7">Transfer Money</h1>
             <div class=" pb-4 bg-white m-7 rounded-3xl px-6">
                 <div class="m-4 mt-0">
@@ -144,7 +144,7 @@
             </div>
         </div>
         <!-- get bonus form section -->
-        <div id="get-bonus-section" class="cash-out-input-section" style="display: none;">
+        <div id="get-bonus-section" class="form-section cash-out-input-section" style="display: none;">
             <h1 class="text-lg font-semibold mt-8 ml-7">Get Bonus</h1>
             <div class=" pb-4 bg-white m-7 rounded-3xl px-6">
                 <div class="m-4 mt-0">
@@ -157,7 +157,7 @@
             </div>
         </div>
         <!-- pay bill form section -->
-        <div id="pay-bill-section" class="add-money-input-section" style="display: none;">
+        <div id="pay-bill-section" class="form-section add-money-input-section" style="display: none;">
             <h1 class="text-lg font-semibold mt-8 ml-7">Pay Bill</h1>
             <div class=" pb-4 bg-white m-7 rounded-3xl px-6">
                 <div class="p-4">
